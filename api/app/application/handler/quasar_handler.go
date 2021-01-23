@@ -8,25 +8,25 @@ import (
 
 const errorService = "error calling service"
 
-type QuasarHandlerContentApplication interface {
+type QuasarHandlerApplication interface {
 	HandlerPostTopSecret(queasar model.RequestQueasar) (responseQueasar model.ResponseQuasar, err error)
 	HandlerGetTopSecret(queasar model.RequestQueasar) (responseQueasar model.ResponseQuasar, err error)
 }
 
-type GetGlobalContentQuasarService struct {
-	GetQuasarContentServicePort service.GetQuasarContentServicePort
+type QuasarHandler struct {
+	GetQuasarServicePort service.GetQuasarServicePort
 }
 
-func (getGlobalContentQuasarService *GetGlobalContentQuasarService) HandlerPostTopSecret(queasar model.RequestQueasar) (responseQueasar model.ResponseQuasar, err error) {
-	if responseQueasar, err = getGlobalContentQuasarService.GetQuasarContentServicePort.PostTopSecret(queasar); err != nil {
+func (quasarHandler *QuasarHandler) HandlerPostTopSecret(queasar model.RequestQueasar) (responseQuasar model.ResponseQuasar, err error) {
+	if responseQuasar, err = quasarHandler.GetQuasarServicePort.PostTopSecret(queasar); err != nil {
 		logger.Error(errorService, err)
 		return
 	}
 	return
 }
 
-func (getGlobalContentQuasarService *GetGlobalContentQuasarService) HandlerGetTopSecret(queasar model.RequestQueasar) (responseQueasar model.ResponseQuasar, err error) {
-	if responseQueasar, err = getGlobalContentQuasarService.GetQuasarContentServicePort.GetTopSecret(queasar); err != nil {
+func (quasarHandler *QuasarHandler) HandlerGetTopSecret(queasar model.RequestQueasar) (responseQuasar model.ResponseQuasar, err error) {
+	if responseQuasar, err = quasarHandler.GetQuasarServicePort.GetTopSecret(queasar); err != nil {
 		logger.Error(errorService, err)
 		return
 	}

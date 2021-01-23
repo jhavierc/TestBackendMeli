@@ -16,12 +16,12 @@ const (
 	endingProcessLogger = "insurance processing with id %s was completed"
 )
 
-type GetGlobalQuasarController struct {
-	GetGlobalQuasarApplication handler.QuasarHandlerContentApplication
+type GetQuasarController struct {
+	GetQuasarApplication handler.QuasarHandlerApplication
 }
 
 //ws
-func (getGlobalQuasarApplication *GetGlobalQuasarController) PostTopSecret(context *gin.Context) {
+func (getQuasarController *GetQuasarController) PostTopSecret(context *gin.Context) {
 
 	requestBody, _ := context.GetRawData()
 	contentDataRequest := model.RequestQueasar{}
@@ -30,7 +30,7 @@ func (getGlobalQuasarApplication *GetGlobalQuasarController) PostTopSecret(conte
 		return
 	}
 	logger.Infof(startProcessLogger, contentDataRequest.Satellites)
-	response,err := getGlobalQuasarApplication.GetGlobalQuasarApplication.HandlerPostTopSecret(contentDataRequest)
+	response,err := getQuasarController.GetQuasarApplication.HandlerPostTopSecret(contentDataRequest)
 	if err != nil {
 		context.Error(err)
 		return
@@ -41,7 +41,7 @@ func (getGlobalQuasarApplication *GetGlobalQuasarController) PostTopSecret(conte
 }
 
 //get pendiente cast json a model
-func (getGlobalQuasarApplication *GetGlobalQuasarController) GetTopSecret(context *gin.Context) {
+func (getQuasarController *GetQuasarController) GetTopSecret(context *gin.Context) {
 
 	requestBody, _ := context.GetRawData()
 
@@ -53,7 +53,7 @@ func (getGlobalQuasarApplication *GetGlobalQuasarController) GetTopSecret(contex
 		return
 	}
 	logger.Infof(startProcessLogger, contentDataRequest.Satellites)
-	response,err := getGlobalQuasarApplication.GetGlobalQuasarApplication.HandlerGetTopSecret(contentDataRequest)
+	response,err := getQuasarController.GetQuasarApplication.HandlerGetTopSecret(contentDataRequest)
 	if err != nil {
 		context.Error(err)
 		return

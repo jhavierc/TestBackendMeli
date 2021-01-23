@@ -4,12 +4,12 @@ import (
 	"github.com/tkanos/gonfig"
 )
 type Satelletes struct {
-	Satellite1_x float32
-	Satellite1_y float32
-	Satellite2_x float32
-	Satellite2_y float32
-	Satellite3_x float32
-	Satellite3_y float32
+	A1 float64
+	B1 float64
+	A2 float64
+	B2 float64
+	A3 float64
+	B3 float64
 }
 func GetConfig() Satelletes {
 	configuration := Satelletes{}

@@ -7,8 +7,8 @@ import (
 	"github.com/TestBackendMeli/goutils/logger"
 )
 
-func GetQuasarController() *controller.GetGlobalQuasarController{
-	return  &controller.GetGlobalQuasarController{GetGlobalQuasarApplication: GetQuasarContainer()}
+func GetQuasarController() *controller.GetQuasarController{
+	return  &controller.GetQuasarController{GetQuasarApplication: GetQuasarAplicationContainer()}
 }
 
 

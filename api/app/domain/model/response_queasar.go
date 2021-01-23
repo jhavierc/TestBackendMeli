@@ -1,6 +1,6 @@
 package model
 
 type ResponseQuasar struct {
-	Position string `json:"position"`
+	Position Position `json:"position"`
 	Message string `json:"message"`
 }

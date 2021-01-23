@@ -1,8 +1,8 @@
 {
-  "Satellite1_x": -500,
-  "Satellite1_y": -200,
-  "Satellite2_x": 100,
-  "Satellite2_y": -100,
-  "Satellite3_x": 500,
-  "Satellite4_y": 100
+  "A1": -500,
+  "B1": -200,
+  "A2": 100,
+  "B2": -100,
+  "A3": 500,
+  "B3": 100
 }
