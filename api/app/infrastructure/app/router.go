@@ -15,7 +15,7 @@ func StartApp() {
 	port := os.Getenv("PORT")
 
 	if port == "" {
-		port = ":" + "3000"
+		port = ":" + "4000"
 	}
 
 	if err := router.Run(port); err != nil {
