@@ -11,7 +11,7 @@ func GetQuasarController() *controller.GetQuasarController{
 	return  &controller.GetQuasarController{GetQuasarApplication: GetQuasarAplicationContainer()}
 }
 
-
+//not used bd in this project
 func GetReadConnectionClient() *sql.DB {
 	connectionString := fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true", "root", "1234", "localhost:3306", "bd_test")
 	clientDB, err := sql.Open("mysql", connectionString)

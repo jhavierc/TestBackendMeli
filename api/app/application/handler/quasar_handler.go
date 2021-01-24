@@ -10,7 +10,7 @@ const errorService = "error calling service"
 
 type QuasarHandlerApplication interface {
 	HandlerPostTopSecret(queasar model.RequestQueasar) (responseQueasar model.ResponseQuasar, err error)
-	HandlerGetTopSecret(queasar model.RequestQueasar) (responseQueasar model.ResponseQuasar, err error)
+	HandlerPostTopSecretSplit(satellite model.Satellite) (responseQueasar model.ResponseQuasar, err error)
 }
 
 type QuasarHandler struct {
@@ -25,10 +25,12 @@ func (quasarHandler *QuasarHandler) HandlerPostTopSecret(queasar model.RequestQu
 	return
 }
 
-func (quasarHandler *QuasarHandler) HandlerGetTopSecret(queasar model.RequestQueasar) (responseQuasar model.ResponseQuasar, err error) {
-	if responseQuasar, err = quasarHandler.GetQuasarServicePort.GetTopSecret(queasar); err != nil {
+func (quasarHandler *QuasarHandler) HandlerPostTopSecretSplit(satellite model.Satellite) (responseQuasar model.ResponseQuasar, err error) {
+	if responseQuasar, err = quasarHandler.GetQuasarServicePort.PostTopSecretSplit(satellite); err != nil {
 		logger.Error(errorService, err)
 		return
 	}
 	return
 }
+
+

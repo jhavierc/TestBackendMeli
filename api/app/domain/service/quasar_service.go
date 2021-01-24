@@ -18,7 +18,7 @@ const (
 
 type GetQuasarServicePort interface {
 	PostTopSecret(queasar model.RequestQueasar) (responseQueasar model.ResponseQuasar, err error)
-	GetTopSecret(queasar model.RequestQueasar) (responseQueasar model.ResponseQuasar, err error)
+	PostTopSecretSplit(satellite model.Satellite) (responseQueasar model.ResponseQuasar, err error)
 }
 
 type GetQuasarContentService struct{}
@@ -35,7 +35,7 @@ func (getQuasarContentService *GetQuasarContentService) PostTopSecret(requestQue
 		return
 	}
 
-	//llamada a la implementeacion original
+	//llamada a la implementeacion al otro metodo
 	//position := calculatePositionEmisorMessage(requestQueasar)
 
 	x, y := GetLocation(requestQueasar.Satellites[0].Distance, requestQueasar.Satellites[1].Distance, requestQueasar.Satellites[2].Distance)
@@ -51,29 +51,34 @@ func (getQuasarContentService *GetQuasarContentService) PostTopSecret(requestQue
 	return responseQueasar, err
 }
 
-//method that performs the calculation to find the coordinates of the ship and decipher the message sent
-func (getQuasarContentService *GetQuasarContentService) GetTopSecret(requestQueasar model.RequestQueasar) (responseQueasar model.ResponseQuasar, err error) {
-
+//method that performs the calculation to find the coordinates of the ship and decipher the message sent only satelly
+func (getQuasarContentService *GetQuasarContentService) PostTopSecretSplit(satellite model.Satellite) (responseQueasar model.ResponseQuasar, err error) {
 	err = validarInitialSatelliteValues()
 	if err != nil {
 		return
 	}
 
-	err = validateParameters(requestQueasar)
+	err = validateParametersSplit(satellite)
 	if err != nil {
 		return
 	}
 
-	position := calculatePositionEmisorMessage(requestQueasar)
+	//llamada a la implementeacion original
+	//position := calculatePositionEmisorMessage(requestQueasar)
+
+	x, y := GetLocation(satellite.Distance)
+	position := model.Position{X: x, Y: y}
+
+	message := GetMessage(satellite.Message)
 
 	responseQueasar = model.ResponseQuasar{
 		Position: position,
-		Message:  "ok",
+		Message:  message,
 	}
 
 	return responseQueasar, err
-
 }
+
 
 //allows to load the initial values ​​of the satellite coordinates
 func validarInitialSatelliteValues() (err error) {
@@ -102,6 +107,19 @@ func validateParameters(requestQueasar model.RequestQueasar) (err error) {
 		if satellite.Distance == 0 {
 			dataValid = false
 		}
+	}
+	if !dataValid {
+		err = errors.New(errorLongDistance)
+		return
+	}
+	return
+}
+
+func validateParametersSplit(satellite model.Satellite) (err error) {
+	dataValid := true
+	logger.Info(satellite.Name + " - " + fmt.Sprint(satellite.Distance))
+	if satellite.Distance == 0 {
+		dataValid = false
 	}
 	if !dataValid {
 		err = errors.New(errorLongDistance)
@@ -148,7 +166,7 @@ func GetMessage(messages ...[]string) (msg string) {
 	var m = map[int]string{}
 	for _, menssage := range messages {
 		for i := 0; i < len(menssage); i++ {
-			if len(m[i])==0{
+			if len(m[i]) == 0 {
 				m[i] = menssage[i]
 			}
 		}
@@ -156,7 +174,7 @@ func GetMessage(messages ...[]string) (msg string) {
 
 	for key, element := range m {
 		fmt.Println("Key:", key, "=>", "Element:", element)
-		if len(msg)==0{
+		if len(msg) == 0 {
 			msg = msg + element
 		} else {
 			msg = msg + " " + element
@@ -186,9 +204,6 @@ func calculatePositionEmisorMessage(requestQueasar model.RequestQueasar) (positi
 
 	return
 }
-
-
-
 
 func isWordExists(words map[string]string, word string) bool {
 	_, ok := words[word]

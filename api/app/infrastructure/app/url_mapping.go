@@ -15,7 +15,6 @@ func mapUrls(router *gin.Engine) {
 	baseUrl := router.Group(prefix)
 	content := baseUrl.Group("/meli")
 
-	//content.GET("/", container.GetContentController().MakeGetContents)
-	//content.GET("/all", container.GetContentController().MakeGetAllContent)
 	content.POST("/topsecret/", container.GetQuasarController().PostTopSecret)
+	content.POST("/topsecret_split/:satellite_name", container.GetQuasarController().PostTopSecretSplit)
 }

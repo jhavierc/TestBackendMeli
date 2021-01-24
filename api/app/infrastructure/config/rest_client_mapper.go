@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	JSONParserError = "the body of the petition is incorrect, check and try again"
+	JSONParserError = "the body incorrect, check and try again"
 )
 
 var (

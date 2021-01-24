@@ -53,15 +53,15 @@ func NewApiError(message string, error string, status int, cause CauseList) ApiE
 }
 
 func NewNotFoundApiError(message string) ApiError {
-	return apiErr{message, "not_found", http.StatusNotFound, CauseList{}}
+	return apiErr{message, "not found", http.StatusNotFound, CauseList{}}
 }
 
 func NewTooManyRequestsError(message string) ApiError {
-	return apiErr{message, "too_many_requests", http.StatusTooManyRequests, CauseList{}}
+	return apiErr{message, "too many requests", http.StatusTooManyRequests, CauseList{}}
 }
 
 func NewBadRequestApiError(message string) ApiError {
-	return apiErr{message, "bad_request", http.StatusBadRequest, CauseList{}}
+	return apiErr{message, "bad request", http.StatusBadRequest, CauseList{}}
 }
 
 func NewValidationApiError(message string, error string, cause CauseList) ApiError {
