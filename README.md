@@ -24,3 +24,11 @@ Una vez dentro de la carpeta del proyecto ejecutar los siguientes comandos Docke
 
 `$ docker run -p 4000:4000 mercadolibre`
  
+Implementación de la solución
+=============
+Para el desarrollo de la siguiente prueba, se utilizó las siguientes tecnologías:
+
+- Golang vgo1.15.2
+- Docker 20.10.2
+- AWS Cloud (Creación de infraestructura base con codigo usando CloudFormation)
+- Docker Hub
