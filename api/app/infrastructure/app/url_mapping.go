@@ -2,8 +2,8 @@ package app
 
 import (
 	"fmt"
-	"github.com/TestBackendMeli/api/app/infrastructure/config"
-	"github.com/TestBackendMeli/api/app/infrastructure/container"
+	"github.com/jhavierc/TestBackendMeli/api/app/infrastructure/config"
+	"github.com/jhavierc/TestBackendMeli/api/app/infrastructure/container"
 	"github.com/gin-gonic/gin"
 )
 

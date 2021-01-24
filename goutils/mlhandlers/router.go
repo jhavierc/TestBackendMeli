@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/TestBackendMeli/goutils/apierrors"
 	"github.com/gin-gonic/gin"
+	"github.com/jhavierc/TestBackendMeli/goutils/apierrors"
 )
 
 var production bool = os.Getenv("GO_ENVIRONMENT") == "production"

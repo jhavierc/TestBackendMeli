@@ -1,12 +1,12 @@
 package controller
 
 import (
-	"github.com/TestBackendMeli/api/app/application/handler"
-	"github.com/TestBackendMeli/api/app/domain/model"
-	"github.com/TestBackendMeli/api/app/infrastructure/config"
-	"github.com/TestBackendMeli/goutils/apierrors"
-	"github.com/TestBackendMeli/goutils/logger"
 	"github.com/gin-gonic/gin"
+	"github.com/jhavierc/TestBackendMeli/api/app/application/handler"
+	"github.com/jhavierc/TestBackendMeli/api/app/domain/model"
+	"github.com/jhavierc/TestBackendMeli/api/app/infrastructure/config"
+	"github.com/jhavierc/TestBackendMeli/goutils/apierrors"
+	"github.com/jhavierc/TestBackendMeli/goutils/logger"
 	"net/http"
 )
 

@@ -2,8 +2,8 @@ package config
 
 import (
 	"encoding/json"
-	"github.com/TestBackendMeli/goutils/logger"
 	"github.com/go-playground/validator"
+	"github.com/jhavierc/TestBackendMeli/goutils/logger"
 	"github.com/pkg/errors"
 	"reflect"
 )

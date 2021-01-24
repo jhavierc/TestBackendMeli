@@ -1,6 +1,6 @@
 package main
 
-import "github.com/TestBackendMeli/api/app/infrastructure/app"
+import "github.com/jhavierc/TestBackendMeli/api/app/infrastructure/app"
 
 //executale
 func main() {

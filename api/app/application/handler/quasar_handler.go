@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"github.com/TestBackendMeli/api/app/domain/model"
-	"github.com/TestBackendMeli/api/app/domain/service"
-	"github.com/TestBackendMeli/goutils/logger"
+	"github.com/jhavierc/TestBackendMeli/api/app/domain/model"
+	"github.com/jhavierc/TestBackendMeli/api/app/domain/service"
+	"github.com/jhavierc/TestBackendMeli/goutils/logger"
 )
 
 const errorService = "error calling service"

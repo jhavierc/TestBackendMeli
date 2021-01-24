@@ -6,7 +6,6 @@ import (
 	"os"
 	"runtime/debug"
 	"strings"
-
 	"github.com/sirupsen/logrus"
 )
 

@@ -1,12 +1,12 @@
 package middleware
 
 import (
-	"net/http"
 	"github.com/gin-gonic/gin"
-	"github.com/TestBackendMeli/api/app/domain/exception"
-	"github.com/TestBackendMeli/goutils/apierrors"
-	"github.com/TestBackendMeli/goutils/logger"
+	"github.com/jhavierc/TestBackendMeli/api/app/domain/exception"
+	"github.com/jhavierc/TestBackendMeli/goutils/apierrors"
+	"github.com/jhavierc/TestBackendMeli/goutils/logger"
 	"github.com/pkg/errors"
+	"net/http"
 )
 
 const internalServerErrorMessage = "an error occurred during the processing of your request"

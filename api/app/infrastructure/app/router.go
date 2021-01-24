@@ -2,9 +2,9 @@ package app
 
 import (
 	"os"
-	"github.com/TestBackendMeli/api/app/infrastructure/controller/middleware"
-	"github.com/TestBackendMeli/goutils/logger"
-	"github.com/TestBackendMeli/goutils/mlhandlers"
+	"github.com/jhavierc/TestBackendMeli/api/app/infrastructure/controller/middleware"
+	"github.com/jhavierc/TestBackendMeli/goutils/logger"
+	"github.com/jhavierc/TestBackendMeli/goutils/mlhandlers"
 )
 
 func StartApp() {

@@ -20,18 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="316b266e-d8b5-43d2-98ad-d52c2c8ceca6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/application/handler/quasar_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/application/handler/quasar_handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/domain/service/quasar_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/domain/service/quasar_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/infrastructure/app/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/infrastructure/app/router.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/infrastructure/app/url_mapping.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/infrastructure/app/url_mapping.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/infrastructure/config/rest_client_mapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/infrastructure/config/rest_client_mapper.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/infrastructure/container/application_container.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/infrastructure/container/application_container.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/infrastructure/container/domain.container.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/infrastructure/container/domain.container.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/infrastructure/container/infrastructure_container.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/infrastructure/container/infrastructure_container.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/infrastructure/controller/middleware/error_handler_middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/infrastructure/controller/middleware/error_handler_middleware.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/infrastructure/controller/quasar_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/infrastructure/controller/quasar_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goutils/apierrors/apierrors.go" beforeDir="false" afterPath="$PROJECT_DIR$/goutils/apierrors/apierrors.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goutils/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/goutils/logger/logger.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goutils/logger/mercury_formatter.go" beforeDir="false" afterPath="$PROJECT_DIR$/goutils/logger/mercury_formatter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goutils/mlhandlers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/goutils/mlhandlers/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,26 +169,26 @@
       <screen x="1440" y="-155" width="1920" height="1003" />
     </state>
     <state x="2213" y="269" key="Github.CreateGistDialog/0.25.1440.875/1440.-155.1920.1003@1440.-155.1920.1003" timestamp="1611384518306" />
-    <state width="1452" height="210" key="GridCell.Tab.0.bottom" timestamp="1611449004561">
-      <screen x="1440" y="-155" width="1920" height="1055" />
+    <state width="1447" height="290" key="GridCell.Tab.0.bottom" timestamp="1611454465316">
+      <screen x="1440" y="-155" width="1920" height="1003" />
     </state>
     <state width="1452" height="210" key="GridCell.Tab.0.bottom/0.25.1440.823/1440.-155.1920.1055@1440.-155.1920.1055" timestamp="1611449004561" />
-    <state width="1458" height="313" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.-155.1920.1003@1440.-155.1920.1003" timestamp="1611410755590" />
-    <state width="1452" height="210" key="GridCell.Tab.0.center" timestamp="1611449004560">
-      <screen x="1440" y="-155" width="1920" height="1055" />
+    <state width="1447" height="290" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.-155.1920.1003@1440.-155.1920.1003" timestamp="1611454465316" />
+    <state width="1447" height="290" key="GridCell.Tab.0.center" timestamp="1611454465315">
+      <screen x="1440" y="-155" width="1920" height="1003" />
     </state>
     <state width="1452" height="210" key="GridCell.Tab.0.center/0.25.1440.823/1440.-155.1920.1055@1440.-155.1920.1055" timestamp="1611449004560" />
-    <state width="1458" height="313" key="GridCell.Tab.0.center/0.25.1440.875/1440.-155.1920.1003@1440.-155.1920.1003" timestamp="1611410755588" />
-    <state width="1452" height="210" key="GridCell.Tab.0.left" timestamp="1611449004559">
-      <screen x="1440" y="-155" width="1920" height="1055" />
+    <state width="1447" height="290" key="GridCell.Tab.0.center/0.25.1440.875/1440.-155.1920.1003@1440.-155.1920.1003" timestamp="1611454465315" />
+    <state width="1447" height="290" key="GridCell.Tab.0.left" timestamp="1611454465315">
+      <screen x="1440" y="-155" width="1920" height="1003" />
     </state>
     <state width="1452" height="210" key="GridCell.Tab.0.left/0.25.1440.823/1440.-155.1920.1055@1440.-155.1920.1055" timestamp="1611449004559" />
-    <state width="1458" height="313" key="GridCell.Tab.0.left/0.25.1440.875/1440.-155.1920.1003@1440.-155.1920.1003" timestamp="1611410755588" />
-    <state width="1452" height="210" key="GridCell.Tab.0.right" timestamp="1611449004561">
-      <screen x="1440" y="-155" width="1920" height="1055" />
+    <state width="1447" height="290" key="GridCell.Tab.0.left/0.25.1440.875/1440.-155.1920.1003@1440.-155.1920.1003" timestamp="1611454465315" />
+    <state width="1447" height="290" key="GridCell.Tab.0.right" timestamp="1611454465316">
+      <screen x="1440" y="-155" width="1920" height="1003" />
     </state>
     <state width="1452" height="210" key="GridCell.Tab.0.right/0.25.1440.823/1440.-155.1920.1055@1440.-155.1920.1055" timestamp="1611449004561" />
-    <state width="1458" height="313" key="GridCell.Tab.0.right/0.25.1440.875/1440.-155.1920.1003@1440.-155.1920.1003" timestamp="1611410755589" />
+    <state width="1447" height="290" key="GridCell.Tab.0.right/0.25.1440.875/1440.-155.1920.1003@1440.-155.1920.1003" timestamp="1611454465316" />
     <state width="939" height="334" key="GridCell.Tab.1.bottom" timestamp="1611412151704">
       <screen x="1440" y="-155" width="1920" height="1055" />
     </state>

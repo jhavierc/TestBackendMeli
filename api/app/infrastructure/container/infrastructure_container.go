@@ -3,8 +3,8 @@ package container
 import (
 	"database/sql"
 	"fmt"
-	"github.com/TestBackendMeli/api/app/infrastructure/controller"
-	"github.com/TestBackendMeli/goutils/logger"
+	"github.com/jhavierc/TestBackendMeli/api/app/infrastructure/controller"
+	"github.com/jhavierc/TestBackendMeli/goutils/logger"
 )
 
 func GetQuasarController() *controller.GetQuasarController{

@@ -3,9 +3,9 @@ package service
 import (
 	"errors"
 	"fmt"
-	"github.com/TestBackendMeli/api/app/domain/model"
-	"github.com/TestBackendMeli/api/app/infrastructure/config"
-	"github.com/TestBackendMeli/goutils/logger"
+	"github.com/jhavierc/TestBackendMeli/api/app/domain/model"
+	"github.com/jhavierc/TestBackendMeli/api/app/infrastructure/config"
+	"github.com/jhavierc/TestBackendMeli/goutils/logger"
 	"math"
 )
 
