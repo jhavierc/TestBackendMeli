@@ -14,10 +14,12 @@ Requerimientos:
 
 Clonar el repositorio:
 `$ git clone https://github.com/jhavierc/TestBackendMeli.git`
+
 `$ cd TestBackendMeli`
 
 Una vez dentro de la carpeta del proyecto ejecutar los siguientes comandos Docker:
 
 `$ docker build . -t mercadolibre`
+
 `$ docker run -p 4000:4000 mercadolibre`
  
