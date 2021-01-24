@@ -1,11 +1,23 @@
-Prueba backend mercado libre
+# Operación Fuego de Quasar
 
-Para ejecutar la aplicación realizar los siguientes pasos:
+![](https://raw.githubusercontent.com/jhavierc/TestBackendMeli/master/Logo_ML.png?token=AB3AZQUAMMXOAI6S5YI66VLABYALK)
 
-1: Clonar el repositorio
-2: desde la terminal ejecutar el siguiente comando: docker build . -t mercadolibre
-   Al finalizar la ejecución del comando debe salir el siguiente mensaje: Successfully tagged mercadolibre:latest
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) 
 
-3: Para correr en local, ejecutar el siguiente comando: docker run -p 3000:3000 mercadolibre
+Ejecutar aplicación local
+=============
+Para ejecutar la aplicación en local, seguir los siguientes pasos:
 
+Requerimientos:
+
+* Tener instalado <abbr title="Docker">Docker</abbr>
+
+Clonar el repositorio:
+`$ git clone https://github.com/jhavierc/TestBackendMeli.git`
+`$ cd TestBackendMeli`
+
+Una vez dentro de la carpeta del proyecto ejecutar los siguientes comandos Docker:
+
+`$ docker build . -t mercadolibre`
+`$ docker run -p 4000:4000 mercadolibre`
  
