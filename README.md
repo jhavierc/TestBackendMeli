@@ -61,7 +61,23 @@ Vista conceptual de la arquitectura limpia.
 
 Los servicios se encuentran desplegados en AWS, los endpoint son:
 
--  topsecret (POST) [Reference link](Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret/)
--  topsecret_split/{satellite_name} (POST) [Reference link](Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret_split/)
+- [topsecret_split/{satellite_name}](Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret_split/ "topsecret_split")
+  
+  request:
+  ```javascript
+  curl --location --request POST 'Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret_split/kenobi' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "distance": 100.0,
+    "message": ["este","","","mensaje",""]
+}'
+  
+  ```
+  
+  response:
 
 
+
+- [topsecret](httpBreak-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret/:// "topsecret")
+
+Para realizar las pruebas se puede 
