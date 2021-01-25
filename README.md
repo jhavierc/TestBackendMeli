@@ -25,11 +25,19 @@ Una vez dentro de la carpeta del proyecto ejecutar los siguientes comandos Docke
 
 `$ docker run -p 4000:4000 mercadolibre`
  
-Implementación de la solución
-=============
+## Implementación de la solución
 Para el desarrollo de la siguiente prueba, se utilizó las siguientes tecnologías:
 
 - Golang vgo1.15.2
 - Docker 20.10.2
 - AWS Cloud (Creación de infraestructura base con codigo usando CloudFormation)
 - Docker Hub
+
+## Arquitectura Cloud
+
+![](https://matthcep.s3.amazonaws.com/mercadolibre_architecture.png)
+
+Para este proyecto se seleccionó a AWS como proveedor cloud para despliegue del microservicio implemetado.
+Una vez cargado la imagen del proyecto en el ECR (Amazon Elastic Container Registry), esta queda disponible para que la tarea configurada en el ECS (Elastic Container Service) realice el despliegue del servicio.
+Para realizar el consumo del servicio se cuentan con tres opciones, eso depende de la implementación y la configuración misma de los servicios de AWS, pero para la prueba el cliente puede acceder al servicio utilizando el DNS del balanceador de carga.
+La arquitectura propuesta según el Well-Architected Framework de AWS esta permite una excelencia operativa, seguridad, fiabilidad, eficiencia de rendimiento y optimización de costos debido a que es posible escalar horizontalmente de forma automatica dependiendo de la cantidad de carga operativa que se detecte en los microservicios.
