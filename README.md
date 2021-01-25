@@ -65,17 +65,26 @@ Los servicios se encuentran desplegados en AWS, los endpoint son:
   
   request:
   ```javascript
+  
   curl --location --request POST 'Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret_split/kenobi' \
---header 'Content-Type: application/json' \
---data-raw '{
+  --header 'Content-Type: application/json' \
+  --data-raw '{
     "distance": 100.0,
     "message": ["este","","","mensaje",""]
-}'
-  
+  }'
   ```
   
   response:
-
+  
+  ```javascript
+   {
+    "position": {
+        "x": -475,
+        "y": 1550
+    },
+    "message": "este   mensaje "
+  }
+  ```
 
 
 - [topsecret](httpBreak-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret/:// "topsecret")
