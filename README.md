@@ -33,6 +33,12 @@ Para el desarrollo de la siguiente prueba, se utilizó las siguientes tecnologí
 - AWS Cloud (Creación de infraestructura base con codigo usando CloudFormation)
 - Docker Hub
 
+El concepto usado para la solución del problema se llama trilateración, la trilateración usa las localizaciones conocidas de dos o más puntos de referencia, y la distancia medida entre el sujeto (Nave) y cada punto de referencia (Satelites). Para determinar de forma única y precisa la localización relativa de un punto en un plano bidimensional usando solo trilateración, se necesitan generalmente al menos 3 puntos de referencia. Para este caso, solo se tienen en cuenta 3 puntos, de acuerdo al requerimiento.
+
+![](https://matthcep.s3.amazonaws.com/Trilateration_meli_test_carlos.png)
+
+En el diagrama se muestra la intercepción de todos los puntos en un plano bidemencional.
+
 ## Arquitectura Cloud
 
 ![](https://matthcep.s3.amazonaws.com/mercadolibre_architecture.png)
