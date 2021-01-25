@@ -164,20 +164,24 @@ func GetLocation(distances ...float64) (x, y float64) {
 //decryp message
 func GetMessage(messages ...[]string) (msg string) {
 	var m = map[int]string{}
-	for _, menssage := range messages {
-		for i := 0; i < len(menssage); i++ {
+	cont :=0
+	for _, message := range messages {
+		//fmt.Println("---------------------")
+		if len(message)>cont{
+			cont = len(message)
+		}
+		for i := 0; i < len(message); i++ {
 			if len(m[i]) == 0 {
-				m[i] = menssage[i]
+				m[i] = message[i]
 			}
+
 		}
 	}
-
-	for key, element := range m {
-		fmt.Println("Key:", key, "=>", "Element:", element)
+	for i :=0; i<cont; i++{
 		if len(msg) == 0 {
-			msg = msg + element
+			msg = msg + m[i]
 		} else {
-			msg = msg + " " + element
+			msg = msg + " " + m[i]
 		}
 	}
 	return
