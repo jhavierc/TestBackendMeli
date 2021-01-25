@@ -50,7 +50,12 @@ Para realizar la configuración de toda la infraestructura, como buena práctica
 
 ## Implementación microservicios Golang
 
-Los microservicios se implementaron con el lenguaje de programación Golang utilizando como buena prática una arquitectura hexagonal.
+Los microservicios se implementaron con el lenguaje de programación Golang utilizando como buena prática una arquitectura limpia (arquitectura hexagonal).
+
+Como sabemos, la Arquitectura Hexagonal, también conocida como arquitectura de puertos y adaptadores, tiene como principal motivación separar nuestra aplicación en distintas capas con su propia responsabilidad. De esta manera se consigue desacoplar capas de nuestra aplicación permitiendo que evolucionen de manera independiente. Además, tener el sistema separado por responsabilidades nos facilitará la reutilización.
+
+![](https://matthcep.s3.amazonaws.com/clean-architecture.jpg)
+Vista conceptual de la arquitectura limpia.
 
 ## Pruebas de servicios
 
