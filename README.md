@@ -88,5 +88,40 @@ Los servicios se encuentran desplegados en AWS, los endpoint son:
 
 
 - [topsecret](httpBreak-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret/:// "topsecret")
+  
+  request:
+  ```javascript
+  curl --location --request POST 'Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret/' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+    "satellites": [
+      {
+        "name": "kenobi",
+        "distance": 100.0,
+        "message": ["este","","","mensaje",""]
+      },
+      {
+        "name": "skywalker",
+        "distance": 115.5,
+        "message": ["","es","","","secreto","carlos"]
+      },
+      {
+        "name": "sato",
+        "distance": 142.7,
+        "message": ["este","","un","",""]
+      }
+    ]
+  }'
+  ```
+  response:
+  
+  ```javascript
+  {
+    "position": {
+        "x": -487.2859125,
+        "y": 1557.014225
+    },
+    "message": "este es un mensaje secreto carlos"
+  }
+  ```
 
-Para realizar las pruebas se puede 
