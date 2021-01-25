@@ -57,11 +57,11 @@ Como sabemos, la Arquitectura Hexagonal, también conocida como arquitectura de 
 ![](https://matthcep.s3.amazonaws.com/clean-architecture.jpg)
 Vista conceptual de la arquitectura limpia.
 
-## Pruebas de servicios
+## Endpoints de los servicios
 
 Los servicios se encuentran desplegados en AWS, los endpoint son:
 
--  topsecret (POST) [Link](Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret/)
--  topsecret_split/{satellite_name} (POST) [Link](Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret_split/)
+-  topsecret (POST) [Reference link](Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret/)
+-  topsecret_split/{satellite_name} (POST) [Reference link](Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret_split/)
 
 
