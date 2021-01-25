@@ -61,5 +61,7 @@ Vista conceptual de la arquitectura limpia.
 
 Los servicios se encuentran desplegados en AWS, los endpoint son:
 
+-  topsecret (POST) [Link](Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret/)
+-  topsecret_split/{satellite_name} (POST) [Link](Break-ECSAL-SQG2XY6VGVMT-992141163.us-east-1.elb.amazonaws.com/api/meli/topsecret_split/)
 
 
