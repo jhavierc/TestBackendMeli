@@ -39,5 +39,22 @@ Para el desarrollo de la siguiente prueba, se utilizó las siguientes tecnologí
 
 Para este proyecto se seleccionó a AWS como proveedor cloud para despliegue del microservicio implemetado.
 Una vez cargado la imagen del proyecto en el ECR (Amazon Elastic Container Registry), esta queda disponible para que la tarea configurada en el ECS (Elastic Container Service) realice el despliegue del servicio.
+
 Para realizar el consumo del servicio se cuentan con tres opciones, eso depende de la implementación y la configuración misma de los servicios de AWS, pero para la prueba el cliente puede acceder al servicio utilizando el DNS del balanceador de carga.
+
 La arquitectura propuesta según el Well-Architected Framework de AWS esta permite una excelencia operativa, seguridad, fiabilidad, eficiencia de rendimiento y optimización de costos debido a que es posible escalar horizontalmente de forma automatica dependiendo de la cantidad de carga operativa que se detecte en los microservicios.
+
+El cluster creado es capaz de desplegar varias instancias de la aplicación en dos zonas de disponibilidad de forma automática, dependiendo del porcentaje de utilizanción de los recursos.
+
+Para realizar la configuración de toda la infraestructura, como buena práctica se recomienda utilizar plantillas de CloudFormation ya que esto permite crear, actualizar y eliminar cualquier pila de servicios, adicional se puede automatizar con otro tipo de técnologias de CI/CD.
+
+## Implementación microservicios Golang
+
+Los microservicios se implementaron con el lenguaje de programación Golang utilizando como buena prática una arquitectura hexagonal.
+
+## Pruebas de servicios
+
+Los servicios se encuentran desplegados en AWS, los endpoint son:
+
+
+
